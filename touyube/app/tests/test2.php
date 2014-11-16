@@ -1,10 +1,15 @@
 <?php
-class AssertingAViewHasSomeData extends TestCase {
-public function testMethod()
+class test2 extends TestCase {
+public function testGetvideo()
 {
-    $this->call('GET', '/login');
+    $response = $this->call('GET', '/video');
 
-    $this->assertViewHas('username');
-    $this->assertViewHas('password', $value);
+    $this->assertResponseok();
+}
+
+public function testPostvideo(){
+	 $response = $this->call('GET', '/video');
+
+    $this->assertEquals($response->getContent(),$response->getContent());
 }
 }

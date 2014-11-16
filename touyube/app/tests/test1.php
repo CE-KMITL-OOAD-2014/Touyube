@@ -1,9 +1,15 @@
 <?php
-class AssertingResponsesAreOK extends TestCase {
-public function testMethod()
+class test1 extends TestCase {
+public function testSignin()
 {
-    $this->call('GET', '/index');
+    $response = $this->call('GET', '/');
 
-    $this->assertResponseOk();
+    $this->assertEquals($response->getContent(),$response->getContent());
+}
+
+public function testResponseSignin(){
+	$$response = $this->call('GET', '/');
+
+    $this->assertResponseok();
 }
 }
